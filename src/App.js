@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navbar from "./component/Navbar";
 import GlobalStyle from "./globalStyle";
 import Hero from "./component/Hero";
+import {SliderDataOne} from "./data/SliderData";
 
 class App extends Component {
   render() {
@@ -9,7 +10,7 @@ class App extends Component {
           <div>
               <GlobalStyle/>
               <Navbar/>
-              <Hero/>
+              <Hero slides={ SliderDataOne } />
           </div>
       )
   }
