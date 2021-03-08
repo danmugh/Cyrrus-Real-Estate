@@ -1,14 +1,22 @@
-import imageOne from "../images/daniel-faust-EPzfdoMYm7s-unsplash.jpg";
-import imageTwo from "../images/florian-schmidinger-b_79nOqf95I-unsplash.jpg";
-import imageThree from "../images/sj-sSH1xo_IXyU-unsplash.jpg";
-import imageFour from "../images/stephan-bechert-yFV39g6AZ5o-unsplash.jpg";
-import imageFive from "../images/vita-vilcina-KtOid0FLjqU-unsplash.jpg";
-import imageSix from "../images/webaliser-_TPTXZd9mOo-unsplash.jpg"
+import imageOne from "../images/img_1.jpeg";
+import imageTwo from "../images/img_2.jpeg";
+import imageThree from "../images/img_3.jpeg";
+import imageFour from "../images/img_4.jpeg";
+import imageFive from "../images/img_5.jpeg";
+import imageSix from "../images/img_6.jpeg";
+import imageSeven from "../images/img_7.jpg";
+import imageEight from "../images/img_8.jpeg";
+import imageNine from "../images/img_9.jpg";
+import imageTen from "../images/img_10.jpg";
+import imageEleven from "../images/img_11.jpg";
+import imageTwelve from "../images/img_12.jpg";
+import imageThirteen from "../images/img_13.jpg";
+import imageFourteen from "../images/img_6.jpeg";
 
 export const SliderDataOne = [
     {
-        title: 'Luxury Villa in Bali, Indonesia',
-        price: '$4, 380, 000',
+        title: 'Villa in Tchegera, DR Congo',
+        price: '$2, 740, 000',
         path: '/homes',
         label: 'View Home',
         image: imageOne,
@@ -23,12 +31,44 @@ export const SliderDataOne = [
         alt: 'house'
     },
     {
-        title: 'Villa in Tchegera, DRCongo',
-        price: '$2, 740, 000',
+        title: 'Luxury Villa in Bali, Indonesia',
+        price: '$4, 380, 000',
         path: '/homes',
         label: 'View Home',
         image: imageThree,
         alt: 'house'
+
+
+    },
+    {
+        title: 'Luxury Villa in Bali, Indonesia',
+        price: '$4, 380, 000',
+        path: '/homes',
+        label: 'View Home',
+        image: imageFour,
+        alt: 'house'
+
+
+    },
+    {
+        title: 'Luxury Villa in Bali, Indonesia',
+        price: '$4, 380, 000',
+        path: '/homes',
+        label: 'View Home',
+        image: imageFive,
+        alt: 'house'
+
+
+    },
+    {
+        title: 'Luxury Villa in Bali, Indonesia',
+        price: '$4, 380, 000',
+        path: '/homes',
+        label: 'View Home',
+        image: imageSix,
+        alt: 'house'
+
+
     },
 ]
 
@@ -38,7 +78,7 @@ export const SliderDataTwo = [
         price: '$4, 380, 000',
         path: '/homes',
         label: 'View Home',
-        image: imageFour,
+        image: imageSeven,
         alt: 'house'
     },
     {
@@ -46,7 +86,7 @@ export const SliderDataTwo = [
         price: '$4, 380, 000',
         path: '/homes',
         label: 'View Home',
-        image: imageFive,
+        image: imageEight,
         alt: 'house'
     },
     {
@@ -54,8 +94,47 @@ export const SliderDataTwo = [
         price: '$4, 380, 000',
         path: '/homes',
         label: 'View Home',
-        image: imageSix,
+        image: imageNine,
+        alt: 'house'
+    },
+    {
+        title: 'Luxury Villa in Zanzibar, Tanzanie',
+        price: '$4, 380, 000',
+        path: '/homes',
+        label: 'View Home',
+        image: imageTen,
+        alt: 'house'
+    },
+    {
+        title: 'Luxury Villa in Zanzibar, Tanzanie',
+        price: '$4, 380, 000',
+        path: '/homes',
+        label: 'View Home',
+        image: imageEleven,
+        alt: 'house'
+    },
+    {
+        title: 'Luxury Villa in Zanzibar, Tanzanie',
+        price: '$4, 380, 000',
+        path: '/homes',
+        label: 'View Home',
+        image: imageTwelve,
+        alt: 'house'
+    },
+    {
+        title: 'Luxury Villa in Zanzibar, Tanzanie',
+        price: '$4, 380, 000',
+        path: '/homes',
+        label: 'View Home',
+        image: imageThirteen,
+        alt: 'house'
+    },
+    {
+        title: 'Luxury Villa in Zanzibar, Tanzanie',
+        price: '$4, 380, 000',
+        path: '/homes',
+        label: 'View Home',
+        image: imageFourteen,
         alt: 'house'
     }
-
 ]

@@ -13,7 +13,8 @@ const Nav = styled.nav`
     z-index: 100;
     position: fixed;
     width: 100%;
-    background: red;
+    box-shadow: 0 05px 15px rgba(0, 0, 0, .4);
+    overflow: hidden;
     
 `;
 
