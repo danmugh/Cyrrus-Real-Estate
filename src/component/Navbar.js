@@ -83,11 +83,11 @@ const NavBtn = styled.div`
     }
 `
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <Nav>
-            <Logo>CYRRUS</Logo>
-            <MenuBars/>
+            <Logo to="/">CYRRUS</Logo>
+            <MenuBars onClick={props.toggle}/>
             <NavMenu>
                 {menuData.map((item, index) => (
                     <NavMenuLinks to={item.link} key={index}>

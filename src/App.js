@@ -1,21 +1,27 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Navbar from "./component/Navbar";
 import GlobalStyle from "./globalStyle";
 import Hero from "./component/Hero";
 import {SliderDataOne} from "./data/SliderData";
+import Dropdown from "./component/Dropdown";
 
-class App extends Component {
-  render() {
+function App () {
+
+      const [isOpen, setIsOpen] = useState(false)
+
+      const toggle = () => {
+          setIsOpen(!isOpen)
+      }
+
       return (
           <div>
               <GlobalStyle/>
-              <Navbar/>
+              <Navbar toggle={toggle}/>
+              <Dropdown toggle={toggle} isOpen={isOpen} />
               <Hero slides={ SliderDataOne } />
           </div>
       )
-  }
 }
-
 
 // http://192.168.1.3:3000
 // <span className="material-icons-outlined">
