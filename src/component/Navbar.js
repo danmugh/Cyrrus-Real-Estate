@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 import { menuData } from "../data/MenuData";
 import { Button } from "./Button";
 import { AiOutlineBars } from "react-icons/ai";
+import { MdAccountBalance } from "react-icons/md"
 
 const Nav = styled.nav`
     height: 60px;
@@ -15,6 +16,10 @@ const Nav = styled.nav`
     width: 100%;
     box-shadow: 0 05px 15px rgba(0, 0, 0, .4);
     overflow: hidden;
+    background-color: ${({show}) => (show ? '#cd853f' : 'none')};
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    
     
 `;
 
@@ -33,6 +38,7 @@ const NavLink = css`
 const Logo = styled(Link)`
     ${NavLink}
     font-style: italic;
+    font-size: 25px;
     text-decoration: none;
     
 `;
@@ -54,6 +60,21 @@ const MenuBars = styled(AiOutlineBars)`
         color: white;
     }
 `;
+
+const AccountBalance = styled(MdAccountBalance)`
+        display: block;
+        background-image: url(${MdAccountBalance});
+        background-size: contain;
+        height: 35px;
+        width: 35px;
+        position: absolute;
+        top: 0;
+        left: 32px;
+        transform: translate(-50%, 25%);
+        color: white;
+   
+`;
+
 
 const NavMenu = styled.div`
     display: flex;
@@ -84,9 +105,25 @@ const NavBtn = styled.div`
 `
 
 const Navbar = (props) => {
+    const [show, handleShow] = useState(false)
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 719) {
+                handleShow(true)
+            } else handleShow(false)
+        });
+        return () => {
+            window.addEventListener('scroll')
+        }
+    }, [])
+
     return (
-        <Nav>
-            <Logo to="/">CYRRUS</Logo>
+        <Nav show={show}>
+            <Logo to="/">
+                <AccountBalance/>
+                CYRRUS
+            </Logo>
             <MenuBars onClick={props.toggle}/>
             <NavMenu>
                 {menuData.map((item, index) => (
@@ -103,5 +140,6 @@ const Navbar = (props) => {
         </Nav>
     )
 }
+
 
 export default Navbar;

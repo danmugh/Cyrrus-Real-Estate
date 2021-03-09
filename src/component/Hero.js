@@ -10,6 +10,7 @@ const HeroSection = styled.section`
     max-height: 1100px;
     position: relative;
     overflow: hidden;
+    
 `
 
 const HeroWrapper = styled.div`
@@ -65,6 +66,8 @@ const HeroImage = styled.img`
     width: 100vw;
     height: 100vh;
     object-fit: cover;
+    transition-timing-function: ease-in;
+    transition: all 0.3s;
 `
 
 const HeroContent = styled.div`
@@ -90,6 +93,13 @@ const HeroContent = styled.div`
             margin-bottom: 1.2rem;
             text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
         }
+        
+    @media screen and (max-width: 480px) {
+        position: relative;
+        left: 15px;
+        z-index: 10
+    }
+        
 `
 
 const Arrow = styled(IoMdArrowRoundForward)`
@@ -103,6 +113,11 @@ const SliderButtons = styled.div`
     display: flex;
     z-index: 10;
     
+    @media screen and (max-width: 480px) {
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
+    }
 `
 
 const arrowButtons = css`
@@ -123,6 +138,7 @@ const arrowButtons = css`
         transform: scale(1.09);
         
     }
+    
 `;
 
 const PrevArrow = styled(IoIosArrowDropleftCircle)`
@@ -146,7 +162,7 @@ const Hero = ({ slides }) => {
     //             setCurrent(current => (current === length - 1 ? 0 : current + 1))
     //         }
     //
-    //         timeout.current = setTimeout(nextSlide, 2000);
+    //         timeout.current = setTimeout(nextSlide, 3000);
     //
     //         return function () {
     //             if (timeout.current) {
@@ -180,7 +196,6 @@ const Hero = ({ slides }) => {
     return (
         <HeroSection>
             <HeroWrapper>
-                {/*<h1>Herooo!</h1>*/}
                 {slides.map((slide, index) =>  {
                     return (
                         <HeroSlide key={index}>
